@@ -1,65 +1,74 @@
-# JanVoice – Multilingual Citizen Grievance Assistant
+# JanVoice – Multilingual Citizen Grievance Chatbot
 
-**Hackathon problem:** HI-02 – Multilingual Citizen Grievance Chatbot  
-**Track:** Human Impact
+## Problem Statement
+**HI-02 – Multilingual Citizen Grievance Chatbot**
 
-## Problem
-Citizens may find it difficult to submit complaints in a language they are comfortable with. This prototype demonstrates a simple workflow to classify a grievance, route it to a relevant department, create a ticket, and let a citizen check its status.
+## Project Overview
+JanVoice is an AI-powered chatbot that helps citizens submit complaints in English and Telugu. It classifies complaints, assigns them to the appropriate government department, generates a unique ticket ID, and allows citizens to track complaint status.
 
-## Features
-- Complaint submission form with English and Telugu interface text.
-- Prototype complaint classification for Water, Electricity, Roads, Sanitation, and Other.
-- English TF-IDF + Logistic Regression classifier trained on illustrative examples.
-- Telugu keyword-based category matching for a small set of common terms.
-- Unique ticket ID generation and local CSV storage.
-- Ticket status tracking and a basic admin dashboard.
-- CSV export and status updates.
+## Key Features
+- English complaint classification
+- Telugu complaint classification
+- Automatic department assignment
+- Unique complaint ticket generation
+- Complaint status tracking
+- Admin dashboard
+- Update complaint status
+- Download complaint records as CSV
 
-## Technology stack
-Python, Streamlit, scikit-learn, pandas, CSV.
+## Technology Stack
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas
+- TF-IDF
+- Logistic Regression
 
-## Setup
-1. Install Python 3.10 or newer.
-2. Download or clone this repository.
-3. Open a terminal in the project folder.
-4. Create and activate a virtual environment (recommended):
+## Project Structure
+- `app.py` – Main Streamlit application
+- `classifier.py` – Complaint classification
+- `database.py` – Complaint storage and management
+- `requirements.txt` – Project dependencies
+- `data/complaints.csv` – Complaint records
 
-   ```bash
-   python -m venv .venv
-   # Windows:
-   .venv\Scripts\activate
-   # macOS/Linux:
-   source .venv/bin/activate
-   ```
+## Installation and Setup
 
-5. Install dependencies:
+1. Clone the repository:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+   `git clone https://github.com/pb0383303-prog/JanVoice-Multilingual-Grievance-Chatbot.git`
 
-6. Run the app:
+2. Open the project folder:
 
-   ```bash
-   streamlit run app.py
-   ```
+   `cd JanVoice-Multilingual-Grievance-Chatbot`
 
-7. Open the local URL printed in the terminal.
+3. Install dependencies:
 
-## How to use
-- Select **Submit a complaint**, enter a complaint, and create a ticket.
-- Copy the generated ticket ID.
-- Select **Track a complaint** and enter the ID to view its status.
-- Select **Admin dashboard** to view records, update status, or download a CSV export.
+   `pip install -r requirements.txt`
 
-## Model and evaluation notes
-The English classifier is trained on a small, hand-written illustrative dataset included in `classifier.py`. The Telugu path currently uses keyword matching, not a trained Telugu language model or automatic translation. No meaningful benchmark accuracy is claimed. For a competition-ready evaluation, collect or create a larger labelled dataset, use a held-out test set, and report precision, recall, F1-score, and a confusion matrix.
+4. Run the application:
 
-## Data and privacy
-This is a local demonstration. Records are stored in `data/complaints.csv` on the machine running the app. Do not enter real sensitive personal information. The app is not connected to government systems and does not actually forward complaints to public departments.
+   `streamlit run app.py`
 
-## AI tools
-Disclose any AI tools used during development and describe how they were used. Update this section accurately before submission.
+## Testing
+The prototype was tested with:
+- English water complaints
+- Telugu water complaints
+- Ticket generation
+- Complaint tracking
+- Admin dashboard
+- Complaint status updates
 
-## Team
-Add your team name and all member names here.
+## Limitations
+- The prototype uses a small illustrative training dataset.
+- Telugu classification uses keyword-based rules.
+- Classification confidence and accuracy require validation using a larger labelled dataset.
+- This is a demonstration prototype, not a live government complaint system.
+
+## Team Details
+- Team Name: [pb0383303]
+- Team Members: [Boppa Pavithra]
+
+## AI Tools Used
+[ChatGPT (OpenAI): Used for project planning, Python code assistance, debugging, and documentation.
+
+GitHub: Used for source code hosting and project version management.]
