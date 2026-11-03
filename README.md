@@ -72,3 +72,19 @@ The prototype was tested with:
 [ChatGPT (OpenAI): Used for project planning, Python code assistance, debugging, and documentation.
 
 GitHub: Used for source code hosting and project version management.]
+## Screenshots
+
+### Home Page
+![JanVoice Home](Screenshot%202026-11-03%20213343.png)
+
+### English Complaint
+![English Complaint](Screenshot%202026-11-03%20213428.png)
+
+### Telugu Complaint
+![Telugu Complaint](Screenshot%202026-11-03%20213517.png)
+
+### Ticket Tracking
+![Ticket Tracking](Screenshot%202026-11-03%20213629.png)
+
+### Admin Dashboard
+![Admin Dashboard](Screenshot%202026-11-03%20213643.png)
